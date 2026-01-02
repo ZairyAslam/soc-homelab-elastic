@@ -1,4 +1,4 @@
-<img width="821" height="941" alt="RevisedArchitectureDiagram" src="https://github.com/user-attachments/assets/2571a609-6499-4f71-81fc-0a2174df0215" /># SOC Homelab – Elastic SIEM with Fleet & Adversary Simulation
+# SOC Homelab – Elastic SIEM with Fleet & Adversary Simulation
 
 This repository documents my personal **SOC homelab** built to practice security monitoring, log ingestion, detection engineering, and alert investigation using the **Elastic Stack (Elastic SIEM)** with **Fleet-managed agents**.  
 The lab also includes **adversary simulation** using Kali Linux and a C2 framework to generate realistic attack telemetry.
@@ -20,7 +20,7 @@ This project is intended to demonstrate **hands-on SOC and blue-team skills** re
 ## 🧱 Architecture Diagram
 
 <p align="center">
-  <img src="diagrams/RevisedArchitectureDiagram" alt="SOC Homelab Architecture" width="800">
+  <img src="diagrams/RevisedArchitectureDiagram.png" alt="SOC Homelab Architecture" width="800">
 </p>
 
 ---
