@@ -1,26 +1,26 @@
-# SOC Homelab – Elastic SIEM with Fleet & Adversary Simulation
+<img width="821" height="941" alt="RevisedArchitectureDiagram" src="https://github.com/user-attachments/assets/2571a609-6499-4f71-81fc-0a2174df0215" /># SOC Homelab – Elastic SIEM with Fleet & Adversary Simulation
 
 This repository documents my personal **SOC homelab** built to practice security monitoring, log ingestion, detection engineering, and alert investigation using the **Elastic Stack (Elastic SIEM)** with **Fleet-managed agents**.  
 The lab also includes **adversary simulation** using Kali Linux and a C2 framework to generate realistic attack telemetry.
 
-This project is intended to demonstrate practical SOC and blue-team skills for **internship and junior SOC roles**.
+This project is intended to demonstrate **hands-on SOC and blue-team skills** relevant to **internship and junior SOC roles**, with an emphasis on real-world troubleshooting and iterative lab development.
 
 ---
 
 ## 📌 Objectives
-- Deploy Elastic Stack (Elasticsearch & Kibana) in a cloud-based VPC
+- Deploy and operate the Elastic Stack (Elasticsearch & Kibana)
 - Centralize endpoint log collection using Elastic Agent + Fleet Server
 - Monitor both Windows and Linux systems
 - Simulate attacker activity using Kali Linux and C2 infrastructure
-- Generate alerts and forward them to a ticketing system
-- Practice SOC workflows: detection, triage, and investigation
+- Create and tune detection rules mapped to MITRE ATT&CK
+- Practice SOC workflows: detection, triage, investigation, and alert escalation
 
 ---
 
 ## 🧱 Architecture Diagram
 
 <p align="center">
-  <img src="diagrams/soc-homelab-architecture.png" alt="SOC Homelab Architecture" width="800">
+  <img src="diagrams/RevisedArchitectureDiagram" alt="SOC Homelab Architecture" width="800">
 </p>
 
 ---
@@ -34,11 +34,19 @@ This project is intended to demonstrate practical SOC and blue-team skills for *
 4. Detections and alerts are visualized in Kibana (Elastic SIEM)
 5. Alerts are forwarded to a ticketing system
 6. SOC Analyst accesses Kibana through a web interface
-7. Attacker activity is simulated using Kali Linux and Mythic C2
+7. Attacker activity is simulated using Kali Linux and a C2 framework
 
 ---
 
-## 🌐 Network Design
+## 🌐 Environment & Network Design
+
+### Current Environment
+- **Deployment Model:** Local Docker-based lab (Docker Desktop)
+- **Purpose:** Rapid iteration, reduced cost, and focused learning
+
+> Cloud deployment (AWS / Azure / GCP) remains a **planned future enhancement** once detections and workflows are validated locally.
+
+### Planned Cloud Network Design
 - **Cloud Provider:** AWS / Azure / GCP (homelab)
 - **VPC CIDR:** 172.32.0.0/24
 - **Subnet Mask:** 255.255.255.0
@@ -49,7 +57,7 @@ This project is intended to demonstrate practical SOC and blue-team skills for *
 ## 🖥️ Components
 
 ### Elastic Stack
-- **Elasticsearch** – Log storage and search
+- **Elasticsearch** – Log storage, indexing, and search
 - **Kibana** – Dashboards, SIEM detections, investigations
 - **Elastic SIEM** – Detection rules and alerting
 
@@ -57,7 +65,7 @@ This project is intended to demonstrate practical SOC and blue-team skills for *
 - Centralized management of Elastic Agents
 - Policy-based configuration and log collection
 
-### Endpoints
+### Endpoints (Planned)
 - **Windows Server**
   - RDP enabled
   - Windows Event Logs
@@ -65,17 +73,17 @@ This project is intended to demonstrate practical SOC and blue-team skills for *
 
 - **Ubuntu Server**
   - SSH enabled
-  - Auth logs and system logs
+  - Authentication and system logs
 
-### Attacker Infrastructure
+### Attacker Infrastructure (Planned)
 - **Kali Linux** attacker machine
-- **Mythic C2** server
+- **C2 framework** (e.g., Mythic)
 - Used to simulate:
   - SSH brute-force attacks
   - RDP login attempts
   - Command-and-control beaconing
 
-### Ticketing System
+### Ticketing System (Planned)
 - Alerts forwarded from Elastic SIEM
 - Simulates SOC alert escalation workflow
 
@@ -119,7 +127,7 @@ Detections are mapped to **MITRE ATT&CK** where applicable.
 
 ## 🚧 Project Status
 - [x] Architecture design
-- [ ] Elastic Stack deployment
+- [x] Elastic Stack deployment (Elasticsearch & Kibana via Docker)
 - [ ] Fleet Server configuration
 - [ ] Endpoint onboarding
 - [ ] Attack simulation
