@@ -83,32 +83,29 @@ This project is intended to demonstrate practical SOC and blue-team skills for *
 
 ## 📂 Repository Structure
 
+```text
 soc-homelab-elastic/
-│
 ├── README.md
 ├── diagrams/
-│ └── soc-homelab-architecture.png
-│
+│   └── soc-homelab-architecture.png
 ├── setup/
-│ ├── elastic-stack-setup.md
-│ ├── fleet-server-setup.md
-│ ├── windows-agent-install.md
-│ └── ubuntu-agent-install.md
-│
+│   ├── elastic-stack-setup.md
+│   ├── fleet-server-setup.md
+│   ├── windows-agent-install.md
+│   └── ubuntu-agent-install.md
 ├── detection/
-│ ├── detection-overview.md
-│ ├── brute-force-detection.md
-│ ├── c2-beaconing-detection.md
-│ └── mitre-mapping.md
-│
+│   ├── detection-overview.md
+│   ├── brute-force-detection.md
+│   ├── c2-beaconing-detection.md
+│   └── mitre-mapping.md
 ├── attack-simulation/
-│ ├── kali-setup.md
-│ ├── mythic-c2-setup.md
-│ └── attack-scenarios.md
-│
+│   ├── kali-setup.md
+│   ├── mythic-c2-setup.md
+│   └── attack-scenarios.md
 └── notes/
-├── lessons-learned.md
-└── troubleshooting.md
+    ├── lessons-learned.md
+    └── troubleshooting.md
+```
     
 ## 🔍 Detection Focus (Initial)
 - SSH brute-force attempts
